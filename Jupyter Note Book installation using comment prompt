@@ -1,0 +1,5 @@
+#For Windows
+#Before using this step you must know that you have installed python in your system
+pip install --upgrade pip
+#it is used for upgrading the pip
+pip install jupyter
