@@ -9,3 +9,7 @@ cleaned=data.drop(columns=["_2004_05","_2005_06"])
 print(cleaned)
 print(cleaned["crop"].unique())
 
+cleaned=cleaned.dropna()
+print(cleaned["crop"].unique())
+
+
