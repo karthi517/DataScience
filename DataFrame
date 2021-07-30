@@ -33,6 +33,25 @@ print(df.isnull())
 print(df)
 print(df.fillna(0))
 print(df.dropna())
+
+dict = {'name':["aparna", "pankaj", "sudhir", "Geeku"],
+        'degree': ["MBA", "BCA", "M.Tech", "MBA"],
+        'score':[90, 40, 80, 98]}
+ 
+# creating a dataframe from a dictionary 
+df = pd.DataFrame(dict)
+ 
+# iterating over rows using iterrows() function 
+for i,j in df.iteritems():
+    print(i,j)
+    print()
+    
+    
+data=pd.read_csv("C:/Users/karth/.spyder-py3/agriproject/Salary_Data.csv")
+print(data['YearsExperience']>=7)
+yx=data.loc[data['YearsExperience']>7,:]
+print(yx)
+   
 # creating a list of dataframe columns
 columns = list(df)
  
