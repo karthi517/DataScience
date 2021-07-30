@@ -1,0 +1,11 @@
+
+import pandas as pd
+data=pd.read_csv("C:/Users/karth/.spyder-py3/agriproject/wholesale_price.csv")
+print(data.isnull().any(axis=1))
+print(data.isnull())
+print(data[data.isnull().any(axis=1)])
+
+cleaned=data.drop(columns=["_2004_05","_2005_06"])
+print(cleaned)
+print(cleaned["crop"].unique())
+
