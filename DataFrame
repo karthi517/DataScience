@@ -59,3 +59,12 @@ for i in columns:
  
     # printing the third element of the column
     print (df[i][2])
+    
+    data=pd.read_csv("C:/Users/karth/.spyder-py3/agriproject/Salary_Data.csv")
+print(data['YearsExperience']>=7)
+yx=data.loc[data['YearsExperience']>7,:]
+print(yx)
+yx_sort=yx.sort_values('Salary',ascending=False)
+print(yx_sort)
+yx_sort.iloc[:5]
+print(yx_sort.iloc[:5])
