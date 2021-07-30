@@ -1,0 +1,42 @@
+import pandas as pd
+Data={"Name":["Karthi","Kavin","Venagi"],
+      "Age":[21,30,20],
+      "Address":["Namakkal","Namakkal","Karur"],
+      "Job":["DataScientist","Python Developer","Full Stack Developer"]
+       }
+print(pd.DataFrame(Data))
+
+#if you name and age only you give like below one
+df=pd.DataFrame(Data)
+print(df[["Name","Age"]])
+
+
+d=pd.read_csv("C:/Users/karth/.spyder-py3/agriproject/wholesale_price.csv",index_col=("crop"))
+
+print(d)
+First=d.loc["Wheat"]
+
+Second=d.loc["Pulses"]
+print(First,Second)
+import numpy as np
+ 
+# dictionary of lists
+dict = {'First Score':[100, 90, np.nan, 95],
+        'Second Score': [30, 45, 56, np.nan],
+        'Third Score':[np.nan, 40, 80, 98]}
+ 
+# creating a dataframe from list
+df = pd.DataFrame(dict)
+ 
+# using isnull() function  
+print(df.isnull())
+print(df)
+print(df.fillna(0))
+print(df.dropna())
+# creating a list of dataframe columns
+columns = list(df)
+ 
+for i in columns:
+ 
+    # printing the third element of the column
+    print (df[i][2])
